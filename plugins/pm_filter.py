@@ -34,10 +34,11 @@ SPELL_CHECK = {}
 
 @Client.on_message(filters.group & filters.text & filters.incoming)
 async def give_filter(client, message):
+    umb = await message.reply_text("Sᴇᴀʀᴄʜɪɴɢ Yᴏᴜʀ Mᴏᴠɪᴇ Pʟᴇᴀꜱ W𝟾😻")
     k = await manual_filters(client, message)
-    if k == False:
+    if k == False 
         await auto_filter(client, message)
-
+        await umb.delete()
 
 @Client.on_callback_query(filters.regex(r"^next"))
 async def next_page(bot, query):
